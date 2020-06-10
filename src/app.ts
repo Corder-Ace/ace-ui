@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-import { checkAppInfo } from './info';
 import './styles/index.scss';
 
 class App extends Component {
 
-  componentDidMount () {
-    checkAppInfo();
-  }
+  componentDidMount () {}
 
   componentDidShow () {}
 

@@ -39,10 +39,8 @@
     "@tarojs/runtime": "3.0.0-rc.2",
     "@tarojs/taro": "3.0.0-rc.2",
     "classnames": "^2.2.6",
-    "md5": "^2.2.1",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
-    "sa-sdk-miniprogram": "^1.13.23"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
