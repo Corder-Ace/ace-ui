@@ -1,0 +1,101 @@
+@import "../style/themes/index";
+@import "../style/mixins/fontFamily";
+
+$ace-modal: ace-modal;
+
+.#{$ace-modal} {
+  display: none;
+
+  &__mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 14, 21, 0.7);
+    z-index: $zindex-modal-mask;
+  }
+
+  &__content {
+    width: 520px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: $zindex-modal;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__hedaer {
+    color: rgba(13, 14, 21, 1);
+    background: #fff;
+    padding: 60px 50px 30px;
+  }
+
+  &--title {
+    font-size: $modal-title-font-size;
+    color: rgba(13, 14, 21, 1);
+    line-height: 48px;
+    @include SemiBold();
+  }
+
+  &__body {
+    padding: 0 50px;
+    font-size: $modal-base-font-size;
+    line-height: 52px;
+    @include Light();
+  }
+
+  &__footer {
+    display: flex;
+    padding: 40px 50px;
+
+    .ace-button {
+      flex: 1;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.#{$ace-modal}--visible {
+  display: block;
+}
+
+.#{$ace-modal}__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  overflow: auto;
+  outline: 0;
+}
+
+.#{$ace-modal}--tip__wrap {
+  .#{$ace-modal}__header {
+    padding: 40px 40px 22px 40px;
+    text-align: center;
+  }
+
+  .#{$ace-modal}__body {
+    padding: 0 40px 30px 40px;
+    color: rgba(127, 127, 127, 1);
+    line-height: 40px;
+    @include Regular();
+  }
+
+  .#{$ace-modal}__footer {
+    padding: 0;
+  }
+
+  .ace-button {
+    border-radius: 0;
+  }
+}

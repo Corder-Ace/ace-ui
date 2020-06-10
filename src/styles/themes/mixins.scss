@@ -1,0 +1,9 @@
+@mixin SemiBold {
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: bold;
+}
+
+@mixin Light {
+  font-family: PingFangSC-Light, PingFang SC;
+  font-weight: 300;
+}

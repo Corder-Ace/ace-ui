@@ -1,0 +1,82 @@
+@import "../style/mixins";
+@import "../style/themes";
+
+$ace-button: ace-button;
+
+.#{$ace-button} {
+  position: relative;
+  height: 64px;
+  font-size: 26px;
+  padding: 14px 30px;
+  border-radius: $btn-border-radius-base;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  @include SemiBold();
+
+  &__inner {
+    color: inherit;
+  }
+
+  &-primary {
+    color: $btn-primary-color;
+    background: $btn-primary-bg;
+    border-color: $btn-primary-border;
+  }
+
+  &-lg {
+    height: 88px;
+    padding: 22px 30px;
+    font-size: 34px;
+  }
+
+  &-sm {
+    height: 48px;
+    padding: 6px 20px;
+    font-size: 24px;
+  }
+
+  &-disabled {
+    color: $btn-disabled-color;
+    background-color: $btn-disabled-bg;
+    border-color: $btn-disabled-border;
+  }
+
+  &-background-ghost {
+    background-color: transparent;
+
+    &.#{$ace-button}-primary {
+      color: $btn-primary-bg;
+    }
+  }
+
+  &-hairline {
+    border-width: 0;
+
+    &::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      border-radius: $btn-border-radius-base * 2;
+      border: 2px solid;
+      border-color: inherit;
+      transform: scale(0.5);
+    }
+  }
+
+  &-block {
+    display: block;
+  }
+}
+
+
+
+
+
+
+

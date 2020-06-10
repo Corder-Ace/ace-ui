@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "action": "allow",
+      "page": "pages/product/view",
+      "params": [
+        "id"
+      ],
+      "matching": "inclusive"
+    },
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

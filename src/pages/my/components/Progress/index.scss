@@ -1,0 +1,43 @@
+@import "../../../../styles/mixin";
+
+$plum-progress: plum-progress;
+
+.#{$plum-progress}-container{
+  @include flexLayout();
+}
+.#{$plum-progress} {
+  &-score {
+    font-size: 20px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(13, 14, 21, 1);
+    line-height: 28px;
+    margin-left: 20px;
+
+    &-total {
+      font-size: 16px;
+      font-family: PingFangSC-Light, PingFang SC;
+    }
+  }
+
+  &-outer {
+    position: relative;
+    width: 344px;
+    height: 6px;
+    background: rgba(255, 12, 5, .1);
+    border-radius: 4px;
+  }
+
+  &-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 162, 162, 1) 0%, rgba(255, 77, 72, 1) 100%);
+    border-radius: 4px;
+    transition: width .3s linear;
+  }
+}
+
+

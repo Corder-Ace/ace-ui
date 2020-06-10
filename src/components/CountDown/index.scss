@@ -1,0 +1,92 @@
+@import "../../styles/mixin";
+
+.page-count-down {
+  width: 100%;
+  position: relative;
+
+  &-img {
+    width: 100%;
+    height: 68px;
+    vertical-align: top;
+  }
+
+  &-text {
+    font-family: "PingFangSC-Medium";
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 0;
+    font-weight: bold;
+  }
+
+  &-number {
+    font-family: DINOT-Bold;
+    line-height: 0;
+    color: #cb4fff;
+    border-radius: 2px;
+    display: inline-flex;
+    width: 34px;
+    height: 44px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+
+    &:first-child {
+      margin: 0 3px 0 20px;
+    }
+
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  &-content {
+    font-family: "PingFangSC-Medium";
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  &-bg {
+    width: 44px;
+    line-height: 44px;
+    font-family: DINOT-Bold;
+    text-align: center;
+    @include flexLayout();
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &-word {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: bold;
+    display: inline-block;
+
+    &:first-child {
+      color: #000;
+      font-weight: normal;
+      padding: 0;
+    }
+  }
+
+  &-dian {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgba(255, 12, 5, 1);
+    font-weight: bold;
+  }
+}
+
+.flex-end {
+  justify-content: flex-end;
+}

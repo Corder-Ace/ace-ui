@@ -1,0 +1,119 @@
+@import "~@scss/mixin";
+
+$float-layout-timer: 300ms;
+$float-layout-pre: plum-float-layout;
+.#{$float-layout-pre}-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: visibility $float-layout-timer cubic-bezier(0.36, 0.66, 0.04, 1);
+  z-index: 100012;
+
+  .#{$float-layout-pre}-header {
+    position: relative;
+    height: 122px;
+    padding: 0 30px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: PingFangSC-Semibold;
+    color: #0d0e15;
+    @include flexLayout();
+
+    &-subtitle {
+      position: relative;
+      font-size: 24px;
+      font-weight: 300;
+      font-family: PingFangSC-Light;
+      color: rgba(13, 14, 21, 1);
+      line-height: 0.907rem;
+      margin-left: 0.267rem;
+    }
+  }
+
+  .#{$float-layout-pre}-header-left {
+    justify-content: flex-start;
+  }
+
+  .#{$float-layout-pre}-close {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+  }
+
+  .#{$float-layout-pre}-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba($color: #000, $alpha: 0.3);
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    z-index: 10008;
+  }
+
+  .#{$float-layout-pre}-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 10009;
+    min-height: 600px;
+    max-height: 950px;
+    background-color: #fff;
+    //border-radius: 20px 20px 0 0;
+    transform: translate3d(0, 100%, 0);
+    transition: transform $float-layout-timer cubic-bezier(0.36, 0.66, 0.04, 1);
+  }
+
+  .#{$float-layout-pre}-body {
+    max-height: 828px;
+    min-height: 514px;
+
+    &-content {
+      max-height: 798px;
+      min-height: 484px;
+    }
+
+    &-content-btn {
+      max-height: 640px;
+    }
+  }
+
+  .#{$float-layout-pre}-bottom {
+    width: 100%;
+    padding: 30px 0;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    @include flexLayout();
+  }
+
+  .#{$float-layout-pre}-btn {
+    width: 690px;
+    height: 88px;
+    text-align: center;
+    line-height: 88px;
+    color: #fff;
+    font-size: 32px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    background-color: #FF0C05;
+    @include flexLayout();
+  }
+}
+
+.#{$float-layout-pre}-active {
+  visibility: visible;
+
+  .#{$float-layout-pre}-overlay {
+    opacity: 1;
+  }
+
+  .#{$float-layout-pre}-container {
+    transform: translate3d(0, 0, 0);
+  }
+}

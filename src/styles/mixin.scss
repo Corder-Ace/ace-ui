@@ -1,0 +1,36 @@
+// flex布局
+@mixin flexLayout($row:center, $column:center, $wrap:nowrap) {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
+  flex-wrap: $wrap;
+}
+
+// 超出显示范围省略号显示
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin bottom {
+  width: 100%;
+  padding: 30px 0;
+  background: transparent;
+  @include flexLayout();
+}
+
+@mixin bottomBtn {
+  width: 690px;
+  height: 88px;
+  text-align: center;
+  line-height: 88px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 88px;
+  background-color: #FF0C05;
+  box-shadow: 0 10px 20px 0 rgba(255, 12, 5, 0.5);
+  @include flexLayout();
+}
+

@@ -1,0 +1,29 @@
+@import "./colors";
+
+$zindex-modal: 1000;
+$zindex-modal-mask: 1000;
+
+$font-size-lg: 34px;
+$font-size-base: 32px;
+$font-size-sm: 26px;
+
+$border-radius-base: 8px;
+// btn
+$btn-border-radius-base: $border-radius-base;
+$btn-primary-color: #fff;
+$btn-primary-bg: #FF0C05;
+$btn-primary-border: #FF0C05;
+
+$btn-disabled-color: #FFFFFF;
+$btn-disabled-bg: #CCCCCC;
+$btn-disabled-border: #CCCCCC;
+$btn-border-width: 1px;
+
+//modal
+$modal-base-font-size: $font-size-sm;
+$modal-tips-font-color: #7F7F7F;
+$modal-title-font-size: $font-size-lg;
+// Animation
+$animation-duration-slow: 0.3s;
+$animation-duration-base: 0.2s;
+$animation-duration-fast: 0.1s;
