@@ -1,5 +1,9 @@
 @import "./colors";
 
+$primary-color: $txt-color-1;
+$success-color: $txt-color-1;
+$disabled-color: $txt-color-5;
+
 $zindex-modal: 1000;
 $zindex-modal-mask: 1000;
 
@@ -11,12 +15,20 @@ $border-radius-base: 8px;
 // btn
 $btn-border-radius-base: $border-radius-base;
 $btn-primary-color: #fff;
-$btn-primary-bg: #FF0C05;
-$btn-primary-border: #FF0C05;
+$btn-primary-bg: $primary-color;
+$btn-primary-border: $primary-color;
 
 $btn-disabled-color: #FFFFFF;
-$btn-disabled-bg: #CCCCCC;
-$btn-disabled-border: #CCCCCC;
+$btn-disabled-bg: $disabled-color;
+$btn-disabled-border: $disabled-color;
+
+$btn-success-color: $success-color;
+$btn-success-bg: rgba($success-color, .1);
+$btn-success-border: rgba($success-color, .1);
+
+$btn-cancel-color: #FFFFFF;
+$btn-cancel-bg: $disabled-color;
+$btn-cancel-border: $disabled-color;
 $btn-border-width: 1px;
 
 //modal

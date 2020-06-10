@@ -3,12 +3,13 @@ import {View, Text, ITouchEvent} from "@tarojs/components";
 import classNames from 'classnames';
 import './index.scss';
 
-export type ButtonType = 'default' | 'primary' | 'ghost' | 'disabled';
+export type ButtonType = 'default' | 'primary' | 'disabled' | 'cancel' | 'success';
 
 export interface BaseButtonProps {
   type?: ButtonType;
   shape?: 'circle' | 'circle-outline' | 'round';
   size?: 'large' | 'small';
+  style?: React.CSSProperties;
   icon?: React.ReactNode;
   loading?: boolean;
   prefixCls?: string;
@@ -30,7 +31,8 @@ const InternalButton: React.FC<BaseButtonProps> = props => {
     prefixCls,
     block,
     hairline,
-    size
+    size,
+    style
   } = props;
 
   let sizeCls;
@@ -63,7 +65,7 @@ const InternalButton: React.FC<BaseButtonProps> = props => {
   });
 
   return (
-    <View className={classNames(classes)} onClick={handleClick}>
+    <View className={classNames(classes)} onClick={handleClick} style={style}>
       <Text className={`${prefixCls}__inner`}>{props.children}</Text>
     </View>
   )

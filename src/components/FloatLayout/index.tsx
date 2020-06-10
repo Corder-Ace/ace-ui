@@ -1,4 +1,4 @@
-import Taro from 'React';
+import React from 'React';
 import {View, ScrollView, Text} from '@tarojs/components';
 import classNames from 'classnames'
 import './index.scss';
@@ -78,9 +78,7 @@ function FloatLayout(props: FloatLayoutProps) {
         >
           <Text>{title}</Text>
           {subtitle && <Text className={`${prefixCls}-header-subtitle`}>{subtitle}</Text>}
-          <View className={`${prefixCls}-close`} onClick={close}><AtIcon prefixClass='icon' value='dibudanchucengguanbi'
-            size={14}
-          /></View>
+          <View className={`${prefixCls}-close`} onClick={close}>x</View>
         </View>)}
         <View className={`${prefixCls}-body`}>
           <ScrollView
