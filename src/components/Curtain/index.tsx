@@ -1,4 +1,4 @@
-import Taro from 'React';
+import React from 'React';
 import {CommonEvent} from '@tarojs/components/types/common';
 import {View} from '@tarojs/components';
 import {CSSProperties} from "react";
@@ -15,7 +15,7 @@ interface CurtainProps {
   maskable?: boolean;
 }
 
-class Curtain extends Taro.Component<CurtainProps, any> {
+class Curtain extends React.Component<CurtainProps, any> {
   static defaultProps: CurtainProps;
   onMask(e: CommonEvent): void {
     if (!this.props.maskable) return;

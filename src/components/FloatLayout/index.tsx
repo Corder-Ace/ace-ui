@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import {View, ScrollView, Text} from '@tarojs/components';
 import classNames from 'classnames'
 import './index.scss';
