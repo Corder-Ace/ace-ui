@@ -1,0 +1,16 @@
+export declare const EXT_REGEXP: RegExp;
+export declare const STYLE_REGEXP: RegExp;
+export declare const SCRIPT_REGEXP: RegExp;
+export declare const ENTRY_EXTS: string[];
+export declare function getPostcssConfig(): object;
+export declare type ModuleEnv = 'esmodule' | 'commonjs';
+export declare type NodeEnv = 'production' | 'development' | 'test';
+export declare type BuildTarget = 'site' | 'package';
+export declare function setModuleEnv(value: ModuleEnv): void;
+export declare function setNodeEnv(value: NodeEnv): void;
+export declare function setBuildTarget(value: BuildTarget): void;
+export declare function isDev(): boolean;
+export declare function isDir(dir: string): boolean;
+export declare function isStyle(path: string): boolean;
+export declare function isScript(path: string): boolean;
+export declare function replaceExt(path: string, ext: string): string;

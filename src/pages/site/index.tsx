@@ -1,7 +1,6 @@
 import React from "react";
 import {View} from '@tarojs/components';
-import {Modal, Button} from '@/components';
-import {login} from '@/api';
+import {Modal, Button} from '../../components';
 import classNames from 'classnames';
 
 
@@ -16,10 +15,6 @@ export default class Site extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    login()
-      .then(res => {
-        console.log(res);
-      })
   }
 
   static prefixCls = 'plum-site';

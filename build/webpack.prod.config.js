@@ -28,8 +28,11 @@ module.exports = {
     path: path.resolve(__dirname, '../lib'),
     filename: '[name]/index.js',
     library: ['ace-components', '[name]'],
-    libraryTarget: 'umd',
+    libraryTarget: "commonjs2",
     publicPath: '/'
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx', '.css', '.scss']
   },
   externals,
   module: {

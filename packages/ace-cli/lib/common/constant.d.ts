@@ -1,0 +1,13 @@
+export declare const CWD: string;
+export declare const ROOT: string;
+export declare const ES_DIR: string;
+export declare const LIB_DIR: string;
+export declare const DOCS_DIR: string;
+export declare const PACKAGE_JSON_FILE: string;
+export declare const ROOT_WEBPACK_CONFIG_FILE: string;
+export declare const ROOT_POSTCSS_CONFIG_FILE: string;
+export declare const DIST_DIR: string;
+export declare const CONFIG_DIR: string;
+export declare const POSTCSS_CONFIG_FILE: string;
+export declare const SRC_DIR: string;
+export declare const STYLE_DIR: string;
